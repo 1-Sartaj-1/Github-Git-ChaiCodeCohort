@@ -66,4 +66,58 @@ Follow these steps to create your GitHub account:
 6. **Start Using GitHub:**  
    - Log in to your account.
    - Explore repositories or create your own!
+   
+## Basic Git Commands
+Before diving into Git commands, let’s create a project directory named **git-crash-course** to practice. The commands below will help you understand how to initialize a Git repository and track changes.
+
+### git init
+We create a file inside the project and name it "index.js". Feel free to use any programming language as the content of the file dosen't matter for this tutorial.
+Now to initialize a new git repository we enter the following command into the terminal of the IDE (VS code in my case):
+
+![Alt text](init-terminal.png)
+
+This command creates a hidden .git folder in your project directory, marking it as a Git repository. After running git init, any files present in the directory will show a U symbol in VS Code’s file explorer, indicating they are untracked by Git. 
+
+![Alt text](init-Untracked.png)
+
+The U symbol means Git is aware of the file but is not yet tracking changes to it.
+
+### git add 
+Now that we've initialized git we want the git to track for all the changes made in the files. we can do that by using the **git add filename** (filename here is index.js). This command moves files from the working directory to the staging area. Git starts tracking changes for staged files, preparing them for the next commit.
+
+![Alt text](add-terminal.png)
+
+After hitting Enter, the status of index.js changes from untracked to staged (index added).
+
+![Alt text](add-tracked.png)
+
+This indicates that Git is now tracking the file, and it is ready to be committed.
+
+### git add .
+Now, let's create another file and name it index2.js.
+
+![Alt text](add.-terminal.png)
+
+Now, we also want to track this file using git, we can very well use the git add command again, however when working with multiple files, it can be tedious to add each file individually. Instead, you can use the **git add .** command to add all changes in the current directory. 
+
+### git status
+The git status command provides information about the current state of your Git repository. It helps you understand which files are being tracked, which files have changes, and which files are staged for the next commit. 
+**git status shows:**
+- Untracked Files: Files that are not yet being tracked by Git.
+- Tracked Files with Changes: Files that Git is tracking but have been modified since the last commit.
+- Staged Files: Files that have been added to the staging area and are ready to be committed.
+
+To demonstrate, let's create another file index3.js. Now, let's run the git status command in the terminal.
+
+![Alt text](terminal.png)
+
+Here, we can see that index3.js is listed under untracked files, which makes sense because it hasn’t been added to Git using the **git add** command in the terminal.
+
+
+
+
+
+
+
+
 
