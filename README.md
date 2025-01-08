@@ -109,13 +109,42 @@ The git status command provides information about the current state of your Git 
 
 To demonstrate, let's create another file index3.js. Now, let's run the git status command in the terminal.
 
-![Alt text](terminal.png)
+![Alt text](commit-terminal.png)
 
 Here, we can see that index3.js is listed under untracked files, which makes sense because it hasn’t been added to Git using the **git add** command in the terminal.
 
+### Concept: What is staging (index)?
+Now that we know how to add a file in Git, let's talk about a concept called staging. When we make changes in a file after **git init** or even **git add**
+the changes happen on your local working directory/IDE (hence the 'U' if you recall the **git init** section). When we use the **git add** or **git add .** command, the file is added to a staging area. It acts as a middle ground between your working directory and the repository. It’s a place where you can stage (add) changes you’ve made in your working directory. Changes in the staging area are not part of the repository yet; they’re only added when you commit.
 
+### git rm --cached
+I would like you to focus on the image in the terminal command of **git status**. The command git **rm --cached <file>** is used to unstage a file or remove it from the Git index (staging area) without deleting the actual file from your working directory. This command is especially helpful when you accidentally add sensitive or unnecessary files to the staging area and want to stop Git from tracking them.
 
+### git commit -m
+The git commit -m command is used to save changes from the staging area to the Git repository with a short, descriptive message about the changes being committed.
+Commit messages describe the changes made in that commit. They help track and understand the history of your project.
 
+![Alt text](commit-terminal.png)
+
+There are some rules for writing clean commit messages so that it's easier for you or your team to understand the code modifications:
+Commit Message Rules:
+- **Use Present Tense**: Write commit messages in the present tense (e.g., “Add login validation” instead of “Added login validation”).
+- **Start with a Capital Letter**: Begin every commit message with a capitalized first letter for consistency and readability.
+- **Keep It Short and Descriptive**: Limit commit messages to 50 characters or less for the title/summary line.
+- **Commit Frequently for Small Changes**: Commit after making meaningful changes, such as adding or modifying a feature, fixing a bug, or updating documentation. Avoid committing large chunks of code all at once.
+- **Use Prefixes for Categorization**: Add prefixes for clarity: **feat**: For new features (e.g., feat: Add user authentication), **fix**: For bug fixes (e.g., fix: Resolve login timeout issue), **docs**: For documentation updates (e.g., docs: Update README.md), **chore**: For general maintenance (e.g., chore: Update dependencies), **refactor**: For code refactoring (e.g., refactor: Optimize search algorithm).
+- **Focus on One Change per Commit**: Each commit should address one feature, bug, or task. This makes the history easier to track and debug.
+
+### git log
+The git log command is used to display the commit history of your Git repository. It shows a chronological list of all commits, allowing you to track changes and identify who made them, when, and why.
+
+![Alt text](log-terminal.png)
+
+The default output of git log includes:
+- **Commit Hash**: A unique identifier for each commit. 
+- **Author**: The name and email of the person who made the commit.
+- **Date**: The date and time the commit was made.
+- **Commit Message**: A description of what the commit includes.
 
 
 
