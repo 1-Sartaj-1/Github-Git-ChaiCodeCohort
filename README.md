@@ -148,8 +148,8 @@ The default output of git log includes:
 
 ### git clone
 - Get the Repository URL: Navigate to the repository you want to clone on your Github. Copy the repository’s URL, HTTPS/SSH.
-<img src="git-clone.png" width="500">
-- Open Your Terminal: Navigate to the directory where you want to clone the repository. ```cd ~/Projects```
+![Alt text](git-clone.png)
+- Open Your Terminal: Navigate to the directory where you want to clone the repository.```bash cd ~/Projects```
 - Clone the Repository: ```git clone <repository-url>```
 
 
