@@ -147,6 +147,7 @@ The default output of git log includes:
 - **Commit Message**: A description of what the commit includes.
 
 ### git clone
+The git clone command creates a local copy of a remote Git repository. This is typically the first step when you want to work on an existing project hosted on a platform like GitHub. Use it as follows:
 - Get the Repository URL: Navigate to the repository you want to clone on your Github. Copy the repository’s URL, HTTPS/SSH.
 ![Alt text](git-clone.png)
 - Open Your Terminal: Navigate to the directory where you want to clone the repository.```bash cd ~/Projects```
