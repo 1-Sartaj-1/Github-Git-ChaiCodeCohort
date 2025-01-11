@@ -172,7 +172,9 @@ In Git, a branch is a lightweight, movable pointer to a specific commit in your 
 - **Feature Development**: Branches allow you to work on new features without affecting the stable main branch.
 - **Bug Fixing**: You can create a branch specifically for fixing a bug, keeping your work isolated and organized.
 - **Collaboration**: Multiple developers can work on different branches of the same project, merging their work when it’s ready.
-- **Experimentation**: Use branches to test out ideas or changes. If they don’t work out, you can simply delete the branch. Some commands for working with branches are as follows:
+- **Experimentation**: Use branches to test out ideas or changes. If they don’t work out, you can simply delete the branch.
+
+**Git Commands**
 - **List All Branches**: ```git branch```
 - **Create a branch**: ```git branch <branch-name>```
 - **Switch to a Branch**: ```git switch <branch-name>```
